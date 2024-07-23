@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
-import Footer from './components/Footer';
+import Freebook from './components/Freebook';
+import Footer from './components/footer';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
     <Navbar/>
     <Banner/>
+    <Freebook/>
     <Footer/>
     </>
   );
