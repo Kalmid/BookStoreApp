@@ -16,15 +16,15 @@ function Navbar() {
         return ()=>{
             window.removeEventListener('scroll', handleScroll)
         }
-    }, [])
+    }, []);
 
     const navItems = (
         <>
             <li>
-                <a>Home</a>
+                <a href="/">Home</a>
             </li>
             <li>
-                <a>Course</a>
+                <a href="/course">Course</a>
             </li>
             <li>
                 <a>Contact</a>
