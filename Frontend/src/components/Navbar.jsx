@@ -2,6 +2,20 @@ import React, { useEffect, useState } from 'react';
 
 function Navbar() {
     
+    const [theme, setTheme]=useState(localStorage.getItem("theme")?localStorage.getItem("theme") :"light");
+    const element=document.documentElement;
+    useEffect(()=>{
+        if(theme==="dark"){
+            element.classList.add("dark");
+            localStorage.setItem("theme", "dark")
+            document.bosy.classList.add("dark");
+        }else{
+            element.classList.remove("dark");
+            localStorage.setItem("theme", "light")
+            document.bosy.classList.remove("dark");
+        }
+    })
+
     const [sticky, setSticky] = useState(false)
     useEffect(() => {
         const handleScroll = () =>{
