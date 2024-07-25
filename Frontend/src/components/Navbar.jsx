@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 function Navbar() {
-    
     const [theme, setTheme]=useState(localStorage.getItem("theme")?localStorage.getItem("theme") :"light");
     const element=document.documentElement;
     useEffect(()=>{
@@ -14,7 +14,7 @@ function Navbar() {
             localStorage.setItem("theme", "light")
             document.bosy.classList.remove("dark");
         }
-    })
+    }, [theme]);
 
     const [sticky, setSticky] = useState(false)
     useEffect(() => {
