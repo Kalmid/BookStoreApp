@@ -1,14 +1,28 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 function Signup() {
     return (
-        <div>
-            <dialog id="my_modal_3" className="modal">
+        <div className="flex h-screen items-center justify-center">
+            <div id="my_modal_3" className="">
                 <div className="modal-box">
                     <form method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        <Link 
+                        to="/"
+                        className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                            ✕
+                        </Link>
                     </form>
-                    <h3 className="font-bold text-lg">Login</h3>
+                    <h3 className="font-bold text-lg">Signup</h3>
+                    <div className="mt-4 space-y-2">
+                        <span>Name</span>
+                        <br/>
+                        <input
+                            type="text"
+                            placeholder="Enter your Name"
+                            className="w-80 px-3 py-1 border rounded-md outline-none"
+                        />
+                    </div>
                     <div className="mt-4 space-y-2">
                         <span>Email</span>
                         <br />
@@ -29,17 +43,19 @@ function Signup() {
                     </div>
                     <div className="flex justify-around mt-4">
                         <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
-                            Login
+                            SignUp
                         </button>
                         <p>
-                            Not registered?{" "}
-                            <Link to="/signup" className="underline text-blue-500 cursor-pointer">
-                                Signup
+                            Have Account?{" "}
+                            <Link
+                                to="/"
+                                className="underline text-blue-500 cursor-pointer">
+                                Login
                             </Link>{" "}
                         </p>
                     </div>
                 </div>
-            </dialog>
+            </div>
         </div>
     )
 }
