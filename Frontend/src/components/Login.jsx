@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-
+import { useForm } from "react-hook-form";
 
 function Login() {
     return (
         <div>
             <dialog id="my_modal_3" className="modal">
                 <div className="modal-box">
-                    <form method="dialog">
+                    <form onSubmit={handleSubmit(onSubmit)} method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
                     <h3 className="font-bold text-lg">Login</h3>
