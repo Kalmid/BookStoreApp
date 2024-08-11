@@ -28,7 +28,11 @@ function Login() {
                             {...register("email", { required: true })}
                         />
                         <br/>
-                        {errors.email && <span className="text-sm text-red-500">This field is requied</span>}
+                        {errors.email && (
+                        <span className="text-sm text-red-500">
+                            This field is requied
+                            </span>
+                            )}
                     </div>
                     <div className="mt-4 space-y-2">
                         <span>Password</span>
